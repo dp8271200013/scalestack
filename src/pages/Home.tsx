@@ -47,16 +47,29 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-background pt-12 pb-20 sm:pt-20 sm:pb-32">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <section className="relative overflow-hidden min-h-screen flex items-center">
+        {/* Full-width background image */}
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `url(${heroImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
+          <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+        </div>
+
+        {/* Content overlay */}
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20">
+          <div className="max-w-4xl mx-auto">
             {/* Hero Content */}
-            <div className="space-y-8">
+            <div className="space-y-8 text-center">
               <div className="space-y-6">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold leading-tight text-reveal text-reveal-1">
                   Scale your small business — websites & AI automations made for SMBs.
                 </h1>
-                <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl text-reveal text-reveal-2">
+                <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto text-reveal text-reveal-2">
                   Fast, affordable, and simple — digital solutions built for local shops, cafés, clinics, and service providers.
                 </p>
               </div>
@@ -68,7 +81,7 @@ export default function Home() {
               </div>
 
               {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-4 text-reveal text-reveal-2">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center text-reveal text-reveal-2">
                 <Link to="/contact">
                   <Button variant="gradient" size="lg">
                     Book a demo
@@ -83,13 +96,13 @@ export default function Home() {
               </div>
 
               {/* Glass Demo Card */}
-              <Card className="shadow-card bg-card/50 backdrop-blur-sm border border-border/50 text-reveal text-reveal-2">
+              <Card className="shadow-card bg-card/50 backdrop-blur-sm border border-border/50 text-reveal text-reveal-2 max-w-2xl mx-auto">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="bg-primary/10 p-3 rounded-lg">
                       <Zap className="text-primary" size={24} />
                     </div>
-                    <div>
+                    <div className="text-left">
                       <h3 className="font-heading font-semibold mb-1">Free 15-min Demo</h3>
                       <p className="text-sm text-muted-foreground">
                         See exactly how we can automate your business processes — no strings attached.
@@ -98,17 +111,6 @@ export default function Home() {
                   </div>
                 </CardContent>
               </Card>
-            </div>
-
-            {/* Hero Image */}
-            <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-soft hero-image-land">
-                <img
-                  src={heroImage}
-                  alt="Modern business workspace with laptop showing analytics dashboard"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
             </div>
           </div>
         </div>

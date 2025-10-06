@@ -57,7 +57,7 @@ export default function Home() {
             backgroundPosition: 'center',
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-accent/20 to-background/50 backdrop-blur-[2px]" />
+          <div className="absolute inset-0 bg-primary/20 backdrop-blur-[1px]" />
         </div>
 
         {/* Content overlay */}
@@ -117,7 +117,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-gradient-to-br from-background via-primary/5 to-accent/5">
+      <section className="py-20 bg-secondary/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-heading font-bold mb-4">
@@ -174,7 +174,7 @@ export default function Home() {
       </section>
 
       {/* Templates Preview */}
-      <section className="py-20 bg-gradient-to-br from-accent/5 via-background to-primary/5">
+      <section className="py-20 bg-accent/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-heading font-bold mb-4">
@@ -215,7 +215,7 @@ export default function Home() {
       {/* Final CTA */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="shadow-soft bg-gradient-to-br from-primary/10 via-accent/10 to-primary/5 border-primary/20">
+          <Card className="shadow-soft bg-primary/5 border-primary/20">
             <CardContent className="p-12 text-center">
               <h2 className="text-3xl sm:text-4xl font-heading font-bold mb-4">
                 Ready to scale your business?

@@ -32,14 +32,14 @@ All colors MUST be HSL.
     --primary: 217 91% 60%; /* #0066FF blue */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 20% 97%;
-    --secondary-foreground: 215 25% 7%;
+    --secondary: 271 76% 53%; /* #8A2BE2 vibrant purple */
+    --secondary-foreground: 0 0% 100%;
 
     --muted: 220 14% 96%;
     --muted-foreground: 220 9% 46%; /* #6B7280 muted text */
 
-    --accent: 220 20% 97%;
-    --accent-foreground: 215 25% 7%;
+    --accent: 332 83% 58%; /* #F02D7A pink accent */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;

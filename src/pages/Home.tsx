@@ -57,7 +57,7 @@ export default function Home() {
             backgroundPosition: 'center',
           }}
         >
-          <div className="absolute inset-0 bg-primary/20 backdrop-blur-[1px]" />
+          <div className="absolute inset-0 bg-background/90 dark:bg-background/85 backdrop-blur-sm" />
         </div>
 
         {/* Content overlay */}
@@ -75,7 +75,7 @@ export default function Home() {
               </div>
 
               {/* Ribbon */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-card rounded-full border border-border text-sm text-muted-foreground text-reveal text-reveal-2">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 dark:bg-primary/20 rounded-full border border-primary/20 text-sm text-foreground text-reveal text-reveal-2">
                 <CheckCircle2 size={16} className="text-primary" />
                 <span className="font-medium">SMB-FIRST • Fast launch • Low cost • No tech skills</span>
               </div>
@@ -96,14 +96,14 @@ export default function Home() {
               </div>
 
               {/* Glass Demo Card */}
-              <Card className="shadow-card bg-card/50 backdrop-blur-sm border border-border/50 text-reveal text-reveal-2 max-w-2xl mx-auto">
+              <Card className="shadow-soft bg-card/80 dark:bg-card/70 backdrop-blur-md border border-primary/20 text-reveal text-reveal-2 max-w-2xl mx-auto">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-primary/10 p-3 rounded-lg">
+                    <div className="bg-primary/20 dark:bg-primary/30 p-3 rounded-lg">
                       <Zap className="text-primary" size={24} />
                     </div>
                     <div className="text-left">
-                      <h3 className="font-heading font-semibold mb-1">Free 15-min Demo</h3>
+                      <h3 className="font-heading font-semibold mb-1 text-foreground">Free 15-min Demo</h3>
                       <p className="text-sm text-muted-foreground">
                         See exactly how we can automate your business processes — no strings attached.
                       </p>

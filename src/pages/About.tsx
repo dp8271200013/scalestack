@@ -29,7 +29,7 @@ export default function About() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold mb-6">
-              About SCALESTACK
+              About GROWNETIX
             </h1>
             <p className="text-xl text-muted-foreground">
               Digital solutions built for small businesses by people who understand them.
@@ -51,7 +51,7 @@ export default function About() {
                   Small businesses are the backbone of our economy, but they often lack access to affordable, quality digital tools. Enterprise solutions are too complex and expensive. DIY tools take too much time to learn.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  We bridge that gap. SCALESTACK provides professional websites, smart automations, and social media management at prices small businesses can afford — with service that feels personal, not corporate.
+                  We bridge that gap. GROWNETIX provides professional websites, smart automations, and social media management at prices small businesses can afford — with service that feels personal, not corporate.
                 </p>
               </CardContent>
             </Card>
@@ -85,12 +85,47 @@ export default function About() {
         </div>
       </section>
 
-      {/* Brand Statement */}
+      {/* Approach Section */}
       <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <Card className="shadow-soft">
+              <CardContent className="p-12">
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl font-heading font-bold mb-6">Approach</h2>
+                </div>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                  At GROWNETIX we believe powerful digital tools should be accessible. We offer <strong>cheap, flexible pricing</strong> tailored for small and growing businesses — no lock-in, clear packages, and pay-as-you-grow options that match real budgets. Our approach combines fast websites, hands-off automations, and simple, transparent pricing so you can scale without surprise costs.
+                </p>
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="space-y-2">
+                    <div className="w-2 h-2 rounded-full bg-primary mx-auto" />
+                    <h3 className="font-heading font-semibold text-center">Flexible Plans</h3>
+                    <p className="text-sm text-muted-foreground text-center">Pay-as-you-grow packages that match your budget</p>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="w-2 h-2 rounded-full bg-primary mx-auto" />
+                    <h3 className="font-heading font-semibold text-center">No Hidden Fees</h3>
+                    <p className="text-sm text-muted-foreground text-center">Clear, transparent pricing with no surprises</p>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="w-2 h-2 rounded-full bg-primary mx-auto" />
+                    <h3 className="font-heading font-semibold text-center">Tailored Onboarding</h3>
+                    <p className="text-sm text-muted-foreground text-center">Personalized setup designed for your business</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Brand Statement */}
+      <section className="py-20 bg-card">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="mb-12">
-              <h2 className="text-4xl sm:text-5xl font-heading font-bold mb-6">SCALESTACK</h2>
+              <h2 className="text-4xl sm:text-5xl font-heading font-bold mb-6">GROWNETIX</h2>
               <p className="text-lg text-muted-foreground uppercase tracking-widest">
                 Create • Automate • Scale
               </p>
@@ -103,7 +138,7 @@ export default function About() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-card">
+      <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Card className="shadow-soft bg-gradient-to-br from-card to-accent/20 max-w-4xl mx-auto">
             <CardContent className="p-12 text-center">
@@ -111,11 +146,11 @@ export default function About() {
                 Let's grow your business together
               </h2>
               <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Book a free 15-minute demo and see how SCALESTACK can help you scale.
+                Book a free 15-minute demo and see how GROWNETIX can help you scale.
               </p>
               <Link to="/contact">
                 <Button variant="gradient" size="lg">
-                  Book your free demo
+                  Book a Demo
                   <ArrowRight size={18} />
                 </Button>
               </Link>

@@ -2,14 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Smooth scrolling */
+/* Smooth scrolling and page transitions */
 html {
   scroll-behavior: smooth;
+}
+
+:root {
+  --transition-duration: 400ms;
+  --transition-easing: cubic-bezier(.16,.84,.44,1);
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+  :root {
+    --transition-duration: 0ms;
   }
 }
 
@@ -112,6 +120,22 @@ All colors MUST be HSL.
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
+  }
+
+  /* Page transition animations */
+  main, [role="main"], .page-container, #root > div {
+    animation: page-enter var(--transition-duration) var(--transition-easing);
+  }
+
+  @keyframes page-enter {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
 

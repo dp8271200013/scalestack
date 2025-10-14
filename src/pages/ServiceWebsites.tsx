@@ -97,7 +97,7 @@ export default function ServiceWebsites() {
                 </p>
                 <Link to="/contact">
                   <Button variant="gradient" size="lg">
-                    Book a demo
+                    Book a Demo
                     <ArrowRight size={18} />
                   </Button>
                 </Link>

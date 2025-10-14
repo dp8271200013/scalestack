@@ -125,10 +125,10 @@ export default function Contact() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold mb-6">
-              Let's Talk About Your Business
+              Book a Demo
             </h1>
             <p className="text-xl text-muted-foreground">
-              Book a free 15-minute demo or send us a message. We'll show you exactly how we can help.
+              Schedule a free 15-minute demo or send us a message. We'll show you exactly how we can help.
             </p>
           </div>
         </div>

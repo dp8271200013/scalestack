@@ -9,10 +9,7 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-2xl font-heading font-bold mb-2">SCALESTACK</h3>
-            <p className="text-xs text-muted-foreground uppercase tracking-wider mb-4">
-              Create • Automate • Scale
-            </p>
+            <h3 className="text-2xl font-heading font-bold mb-2">GROWNETIX</h3>
             <p className="text-sm text-muted-foreground max-w-sm">
               Fast, affordable digital solutions for small businesses. Websites, AI automations, and social media management.
             </p>
@@ -61,7 +58,7 @@ export const Footer = () => {
               </li>
               <li>
                 <Link to="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Contact Us
+                  Book a Demo
                 </Link>
               </li>
             </ul>
@@ -70,7 +67,7 @@ export const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          <p>&copy; {currentYear} SCALESTACK. All rights reserved.</p>
+          <p>&copy; {currentYear} GROWNETIX. All rights reserved.</p>
         </div>
       </div>
     </footer>

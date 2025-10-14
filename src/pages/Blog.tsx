@@ -2,6 +2,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar } from "lucide-react";
 import blogHeader from "@/assets/blog-header.jpg";
+import blogAutomation from "@/assets/blog-automation.jpg";
+import blogMobile from "@/assets/blog-mobile.jpg";
 
 export default function Blog() {
   // Seed blog posts
@@ -12,6 +14,7 @@ export default function Blog() {
       date: "March 15, 2024",
       category: "Automation",
       slug: "5-simple-automations",
+      image: blogAutomation,
     },
     {
       title: "Why Your Small Business Needs a Mobile-First Website",
@@ -19,6 +22,7 @@ export default function Blog() {
       date: "March 10, 2024",
       category: "Web Design",
       slug: "mobile-first-website",
+      image: blogMobile,
     },
   ];
 
@@ -51,7 +55,14 @@ export default function Blog() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto space-y-8">
             {posts.map((post, index) => (
-              <Card key={index} className="shadow-card hover:shadow-soft transition-all duration-300 group cursor-pointer">
+              <Card key={index} className="overflow-hidden shadow-card hover:shadow-soft transition-all duration-300 group cursor-pointer">
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={post.image} 
+                    alt={post.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
                 <CardContent className="p-8">
                   <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
                     <span className="inline-flex items-center gap-1">

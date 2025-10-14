@@ -2,7 +2,10 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Zap, Globe, Share2, CheckCircle2 } from "lucide-react";
-import heroImage from "@/assets/hero-business.jpg";
+import heroImage from "@/assets/hero-grownetix.jpg";
+import serviceWebsitePhoto from "@/assets/service-website-photo.jpg";
+import serviceAiPhoto from "@/assets/service-ai-photo.jpg";
+import serviceSocialPhoto from "@/assets/service-social-photo.jpg";
 
 export default function Home() {
   const services = [
@@ -11,18 +14,21 @@ export default function Home() {
       title: "Website Building",
       description: "Mobile-first websites delivered quickly — SEO-ready and easy for customers to use.",
       link: "/services/websites",
+      image: serviceWebsitePhoto,
     },
     {
       icon: Zap,
       title: "AI Automations",
       description: "Automate invoices, receipts, social posting and simple chat replies — set once, let it run.",
       link: "/services/ai-automations",
+      image: serviceAiPhoto,
     },
     {
       icon: Share2,
       title: "Social Media Management",
       description: "Strategy, content creation and scheduled posting so you show up consistently.",
       link: "/services/social-media",
+      image: serviceSocialPhoto,
     },
   ];
 
@@ -56,8 +62,10 @@ export default function Home() {
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
+          role="img"
+          aria-label="GROWNETIX hero image — AI automation and growth"
         >
-          <div className="absolute inset-0 bg-background/90 dark:bg-background/85 backdrop-blur-sm" />
+          <div className="absolute inset-0 bg-background/50 dark:bg-background/70" />
         </div>
 
         {/* Content overlay */}
@@ -66,11 +74,14 @@ export default function Home() {
             {/* Hero Content */}
             <div className="space-y-8 text-center">
               <div className="space-y-6">
+                <p className="text-sm sm:text-base font-medium tracking-widest uppercase text-primary text-reveal text-reveal-1">
+                  CREATE. AUTOMATE. SCALE.
+                </p>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold leading-tight text-reveal text-reveal-1">
-                  Scale your small business — websites & AI automations made for SMBs.
+                  GROWNETIX
                 </h1>
                 <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto text-reveal text-reveal-2">
-                  Fast, affordable, and simple — digital solutions built for local shops, cafés, clinics, and service providers.
+                  Scale your small business — fast websites & AI automations built for growth
                 </p>
               </div>
 
@@ -84,13 +95,13 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center text-reveal text-reveal-2">
                 <Link to="/contact">
                   <Button variant="gradient" size="lg">
-                    Book a demo
+                    Book a Demo
                     <ArrowRight size={18} />
                   </Button>
                 </Link>
                 <Link to="/services">
                   <Button variant="ghost" size="lg">
-                    See services
+                    See Services
                   </Button>
                 </Link>
               </div>
@@ -131,7 +142,14 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <Link key={index} to={service.link}>
-                <Card className="h-full transition-all duration-300 hover:shadow-soft hover:-translate-y-1 cursor-pointer group">
+                <Card className="h-full overflow-hidden transition-all duration-300 hover:shadow-soft hover:-translate-y-1 cursor-pointer group">
+                  <div className="aspect-video overflow-hidden">
+                    <img 
+                      src={service.image} 
+                      alt={`${service.title} service visualization`}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
                   <CardContent className="p-8">
                     <div className="bg-primary/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
                       <service.icon className="text-primary" size={28} />
@@ -225,7 +243,7 @@ export default function Home() {
               </p>
               <Link to="/contact">
                 <Button variant="gradient" size="lg">
-                  Book your free demo
+                  Book a Demo
                   <ArrowRight size={18} />
                 </Button>
               </Link>

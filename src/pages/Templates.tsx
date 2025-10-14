@@ -156,7 +156,7 @@ export default function Templates() {
             </p>
             <Link to="/contact">
               <Button variant="gradient" size="lg">
-                Book your free demo
+                Book a Demo
                 <ArrowRight size={18} />
               </Button>
             </Link>

@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Globe, Zap, Share2, ArrowRight } from "lucide-react";
+import serviceWebsitePhoto from "@/assets/service-website-photo.jpg";
+import serviceAiPhoto from "@/assets/service-ai-photo.jpg";
+import serviceSocialPhoto from "@/assets/service-social-photo.jpg";
 
 export default function Services() {
   const services = [
@@ -11,6 +14,7 @@ export default function Services() {
       description: "Mobile-first websites delivered quickly — SEO-ready and easy for customers to use. Perfect for local businesses that need a professional online presence.",
       features: ["Responsive design", "SEO optimized", "Fast delivery", "Easy to update"],
       link: "/services/websites",
+      image: serviceWebsitePhoto,
     },
     {
       icon: Zap,
@@ -18,6 +22,7 @@ export default function Services() {
       description: "Automate invoices, receipts, social posting and simple chat replies — set once, let it run. Save hours every week on repetitive tasks.",
       features: ["Invoice automation", "Receipt generation", "Social posting", "Chat replies"],
       link: "/services/ai-automations",
+      image: serviceAiPhoto,
     },
     {
       icon: Share2,
@@ -25,6 +30,7 @@ export default function Services() {
       description: "Strategy, content creation and scheduled posting so you show up consistently. Build your brand without the daily hassle.",
       features: ["Content strategy", "Post creation", "Scheduling", "Analytics"],
       link: "/services/social-media",
+      image: serviceSocialPhoto,
     },
   ];
 
@@ -51,33 +57,40 @@ export default function Services() {
             {services.map((service, index) => (
               <Card key={index} className="overflow-hidden shadow-card">
                 <CardContent className="p-0">
-                  <div className="grid md:grid-cols-2 gap-8 p-8 md:p-12">
-                    <div className="space-y-6">
-                      <div className="inline-flex bg-primary/10 w-16 h-16 rounded-xl items-center justify-center">
-                        <service.icon className="text-primary" size={32} />
+                  <div className="grid md:grid-cols-2 gap-0">
+                    <div className={`order-2 ${index % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}>
+                      <div className="p-8 md:p-12 space-y-6 h-full flex flex-col justify-center">
+                        <div className="inline-flex bg-primary/10 w-16 h-16 rounded-xl items-center justify-center">
+                          <service.icon className="text-primary" size={32} />
+                        </div>
+                        <div>
+                          <h2 className="text-2xl sm:text-3xl font-heading font-bold mb-4">
+                            {service.title}
+                          </h2>
+                          <p className="text-muted-foreground text-lg mb-6">{service.description}</p>
+                        </div>
+                        <ul className="space-y-4 mb-6">
+                          {service.features.map((feature, idx) => (
+                            <li key={idx} className="flex items-center gap-3">
+                              <div className="w-2 h-2 rounded-full bg-primary" />
+                              <span className="text-foreground">{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                        <Link to={service.link}>
+                          <Button variant="gradient">
+                            Learn more
+                            <ArrowRight size={18} />
+                          </Button>
+                        </Link>
                       </div>
-                      <div>
-                        <h2 className="text-2xl sm:text-3xl font-heading font-bold mb-4">
-                          {service.title}
-                        </h2>
-                        <p className="text-muted-foreground text-lg mb-6">{service.description}</p>
-                      </div>
-                      <Link to={service.link}>
-                        <Button variant="gradient">
-                          Learn more
-                          <ArrowRight size={18} />
-                        </Button>
-                      </Link>
                     </div>
-                    <div className="flex items-center">
-                      <ul className="space-y-4">
-                        {service.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-center gap-3">
-                            <div className="w-2 h-2 rounded-full bg-primary" />
-                            <span className="text-foreground">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
+                    <div className={`order-1 ${index % 2 === 0 ? 'md:order-2' : 'md:order-1'} aspect-square md:aspect-auto`}>
+                      <img 
+                        src={service.image} 
+                        alt={`${service.title} service visualization`}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   </div>
                 </CardContent>
@@ -99,7 +112,7 @@ export default function Services() {
             </p>
             <Link to="/contact">
               <Button variant="gradient" size="lg">
-                Book a free consultation
+                Book a Demo
                 <ArrowRight size={18} />
               </Button>
             </Link>

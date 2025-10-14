@@ -11,7 +11,6 @@ const navLinks = [
   { href: "/templates", label: "Templates" },
   { href: "/about", label: "About" },
   { href: "/blog", label: "Blog" },
-  { href: "/contact", label: "Contact" },
 ];
 
 export const Navigation = () => {
@@ -25,10 +24,7 @@ export const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <span className="text-xl sm:text-2xl font-heading font-bold tracking-tight">
-              SCALESTACK
-            </span>
-            <span className="hidden sm:inline text-[10px] text-muted-foreground font-body uppercase tracking-wider">
-              Create • Automate • Scale
+              GROWNETIX
             </span>
           </Link>
 
@@ -51,7 +47,7 @@ export const Navigation = () => {
             <ThemeToggle />
             <Link to="/contact">
               <Button variant="gradient" size="sm" className="ml-4">
-                Book a demo
+                Book a Demo
               </Button>
             </Link>
           </div>
@@ -91,7 +87,7 @@ export const Navigation = () => {
             ))}
             <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="block pt-2">
               <Button variant="gradient" size="default" className="w-full">
-                Book a demo
+                Book a Demo
               </Button>
             </Link>
           </div>

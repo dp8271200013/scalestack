@@ -55,17 +55,19 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative overflow-hidden min-h-screen flex items-center">
         {/* Full-width background image */}
-        <div 
-          className="absolute inset-0 z-0"
+        <div
+          className="absolute inset-0 z-0 hero-image-land"
           style={{
             backgroundImage: `url(${heroImage})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
+            filter: 'brightness(0.82) contrast(0.92) saturate(0.9)',
           }}
           role="img"
           aria-label="GROWNETIX hero image — AI automation and growth"
         >
-          <div className="absolute inset-0 bg-background/50 dark:bg-background/70" />
+          {/* Gradient/contrast overlay to reduce shine while keeping premium look */}
+          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/55 to-background/75 dark:from-background/65 dark:via-background/70 dark:to-background/80" />
         </div>
 
         {/* Content overlay */}
@@ -80,7 +82,7 @@ export default function Home() {
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold leading-tight text-reveal text-reveal-1">
                   GROWNETIX
                 </h1>
-                <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto text-reveal text-reveal-2">
+                <p className="text-xl sm:text-2xl font-medium text-foreground/95 max-w-2xl mx-auto leading-relaxed drop-shadow-[0_1px_2px_rgba(0,0,0,0.55)] text-reveal text-reveal-2">
                   Scale your small business — fast websites & AI automations built for growth
                 </p>
               </div>

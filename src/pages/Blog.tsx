@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, Clock } from "lucide-react";
+import { Link } from "react-router-dom";
 import blogAIAutomation from "@/assets/blog-ai-automation-transform.jpg";
 import blogDigitalTransformation from "@/assets/blog-digital-transformation.jpg";
 import blogModernWebsite from "@/assets/blog-modern-website.jpg";
@@ -10,6 +11,7 @@ import blogAIChatbots from "@/assets/blog-ai-chatbots.jpg";
 export default function Blog() {
   const posts = [
     {
+      slug: "ai-automation-transform",
       title: "5 Ways AI Automation Can Transform Your Small Business",
       excerpt: "Discover how artificial intelligence and automation can help you save time, reduce costs, and scale your operations efficiently.",
       date: "Jan 15, 2025",
@@ -18,6 +20,7 @@ export default function Blog() {
       image: blogAIAutomation,
     },
     {
+      slug: "digital-transformation",
       title: "The Complete Guide to Business Digitalization in 2025",
       excerpt: "Everything you need to know about transforming your business into the digital age, from tools to strategies.",
       date: "Jan 10, 2025",
@@ -26,6 +29,7 @@ export default function Blog() {
       image: blogDigitalTransformation,
     },
     {
+      slug: "modern-website",
       title: "Why Your Business Needs a Modern Website (And How to Get One)",
       excerpt: "Learn why a professional website is crucial for business growth and what features make a website truly effective.",
       date: "Jan 5, 2025",
@@ -34,6 +38,7 @@ export default function Blog() {
       image: blogModernWebsite,
     },
     {
+      slug: "social-media-automation",
       title: "Social Media Automation: Work Smarter, Not Harder",
       excerpt: "Master the art of social media management with automation tools that keep your content flowing 24/7.",
       date: "Dec 28, 2024",
@@ -42,6 +47,7 @@ export default function Blog() {
       image: blogSocialMedia,
     },
     {
+      slug: "startup-scaleup",
       title: "From Startup to Scale-Up: Digital Tools That Matter",
       excerpt: "The essential digital tools and technologies that can help your startup grow into a thriving business.",
       date: "Dec 20, 2024",
@@ -50,6 +56,7 @@ export default function Blog() {
       image: blogStartupScaleup,
     },
     {
+      slug: "ai-chatbots",
       title: "Understanding AI Chatbots: Your 24/7 Customer Service Solution",
       excerpt: "AI-powered chatbots can revolutionize your customer service and boost customer satisfaction.",
       date: "Dec 15, 2024",
@@ -80,7 +87,8 @@ export default function Blog() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post, index) => (
-              <Card key={index} className="overflow-hidden shadow-card hover:shadow-soft transition-all duration-300 group cursor-pointer flex flex-col">
+              <Link key={index} to={`/blog/${post.slug}`}>
+                <Card className="overflow-hidden shadow-card hover:shadow-soft transition-all duration-300 group cursor-pointer flex flex-col h-full">
                 <div className="relative aspect-video overflow-hidden">
                   <img 
                     src={post.image} 
@@ -112,6 +120,7 @@ export default function Blog() {
                   </div>
                 </CardContent>
               </Card>
+              </Link>
             ))}
           </div>
 

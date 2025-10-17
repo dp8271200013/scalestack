@@ -65,7 +65,7 @@ export default function Home() {
           role="img"
           aria-label="GROWNETIX hero image — AI automation and growth"
         >
-          <div className="absolute inset-0 bg-background/50 dark:bg-background/70" />
+          <div className="absolute inset-0 bg-background/30 dark:bg-background/40" />
         </div>
 
         {/* Content overlay */}
@@ -74,13 +74,13 @@ export default function Home() {
             {/* Hero Content */}
             <div className="space-y-8 text-center">
               <div className="space-y-6">
-                <p className="text-sm sm:text-base font-medium tracking-widest uppercase text-primary text-reveal text-reveal-1">
+                <p className="text-sm sm:text-base font-medium tracking-widest uppercase text-primary text-reveal text-reveal-1 drop-shadow-md dark:[text-shadow:0_0_20px_rgba(var(--primary),0.5)]">
                   CREATE. AUTOMATE. SCALE.
                 </p>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold leading-tight text-reveal text-reveal-1">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold leading-tight text-reveal text-reveal-1 drop-shadow-lg dark:drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)]">
                   GROWNETIX
                 </h1>
-                <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto text-reveal text-reveal-2">
+                <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto text-reveal text-reveal-2 drop-shadow-md dark:drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
                   Scale your small business — fast websites & AI automations built for growth
                 </p>
               </div>
